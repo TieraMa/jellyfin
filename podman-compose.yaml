@@ -1,7 +1,7 @@
 version: "3"
 services:
   jellyfin:
-    image: "docker.io/jellyfin/jellyfin:latest"
+    image: "docker.io/jellyfin/jellyfin:10.8.7"
     user: 1002:1002
     group_add:
       - 998
@@ -30,8 +30,8 @@ services:
       - 8920:8920
     volumes:
       - ./nginx/jellyfin.conf:/etc/nginx/conf.d/default.conf
-      - ./nginx/8718248_www.juminhee.com.pem:/etc/ssl/certs/8718248_www.juminhee.com.pem
-      - ./nginx/8718248_www.juminhee.com.key:/etc/ssl/private/8718248_www.juminhee.com.key
+      - ./nginx/8781614_www.juminhee.com.pem:/etc/ssl/certs/8718248_www.juminhee.com.pem
+      - ./nginx/8781614_www.juminhee.com.key:/etc/ssl/private/8718248_www.juminhee.com.key
     networks:
       - jellyfin-net
 
